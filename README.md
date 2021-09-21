@@ -1,3 +1,3 @@
 # ETL-Project
-![test](/analysis/twitter-mask.jpg){:style="left: right;margin-right: 7px;margin-top: 7px;"}
+<img src="/analysis/twitter-mask.jpg" align="left" width="200px"/>
 ### ETL-Project
