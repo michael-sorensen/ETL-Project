@@ -1,2 +1,2 @@
 # ETL-Project
-![### Project Overview](/analysis/twitter-mask.jpg)
+![Project Overview](/analysis/twitter-mask.jpg)
