@@ -1,6 +1,6 @@
 # ETL-Project
 <img src="/analysis/twitter-mask.jpg" align="left" width="100px"/>
-This database contains summary statistics about COVID-19 cases, public health mandates, and public compliance for every U.S. state, as well as over 4,000 tweets about masks from users accross the country. The data timeframe is May-August of 2020.
+This database contains **summary statistics about COVID-19** cases, public health mandates, and public compliance for every U.S. state, as well as over **4,000 tweets about masks** from users accross the country. The data timeframe is May-August of 2020.
 <br>
 <br>
 
@@ -85,14 +85,12 @@ Once the data frames were finalized, they were connected and loaded into the Mas
 
 ```SQL
 CREATE TABLE tweets (
-"Unnamed: 0" VARCHAR,
 "tweet.id" VARCHAR,
 "tweet.date" date,
 "content" text,
 "tweet.username" varchar,
 "user.location" varchar,
 "user.id" varchar,
-"month" varchar,
 "state" varchar,
 "Month" varchar,
 Primary Key ("state", "Month"),
