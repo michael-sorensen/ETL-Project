@@ -2,7 +2,6 @@ CREATE TABLE april (
 
 "State" VARCHAR,
 "Month" VARCHAR,
-Primary Key ("State", "Month"),
 "adh_APRavg" dec,
 "tot_cases_Apr" int,
 "case_rate_Apr" dec,
@@ -15,13 +14,9 @@ Primary Key ("State", "Month"),
 
 
 
-
-
-
 CREATE TABLE may (
 "State" VARCHAR,
 "Month" VARCHAR,
-Primary Key ("State", "Month"),
 "adh_MAYavg" dec,
 "tot_cases_May" int,
 "case_rate_May" dec,
@@ -35,7 +30,6 @@ Primary Key ("State", "Month"),
 CREATE TABLE june (
 "State" VARCHAR,
 "Month" VARCHAR,
-Primary Key ("State", "Month"),
 "adh_JUNEavg" dec,
 "tot_cases_Jun" int,
 "case_rate_Jun" dec,
@@ -49,7 +43,6 @@ Primary Key ("State", "Month"),
 CREATE TABLE july (
 "State" VARCHAR,
 "Month" VARCHAR,
-Primary Key ("State", "Month"),
 "adh_JULavg" dec,
 "tot_Cases_Jul" int,
 "case_rate_Jul" dec,
@@ -63,7 +56,6 @@ Primary Key ("State", "Month"),
 CREATE TABLE august (
 "State" VARCHAR,
 "Month" VARCHAR, 
-Primary Key ("State", "Month"),
 "adh_AUGavg" dec,
 "tot_cases_Aug" int,
 "case_rate_Aug" dec,
@@ -77,7 +69,6 @@ Primary Key ("State", "Month"),
 CREATE TABLE september (
 "State" VARCHAR,
 "Month" VARCHAR,
-Primary Key ("State", "Month"),	
 "AdhSEPavg" dec,
 "tot_cases_Sep" int,
 "case_rate_Sep" dec,
@@ -91,7 +82,6 @@ Primary Key ("State", "Month"),
 CREATE TABLE october (
 "State" VARCHAR,
 "Month" VARCHAR,
-Primary Key ("State", "Month"),
 "adh_OCTavg" dec,
 "tot_cases_Oct" int,
 "case_rate_Oct" dec,
@@ -104,7 +94,6 @@ Primary Key ("State", "Month"),
 
 
 CREATE TABLE tweets (
-"Unnamed: 0" VARCHAR,
 "tweet.id" VARCHAR,
 "tweet.date" date,
 "content" text,
@@ -114,10 +103,10 @@ CREATE TABLE tweets (
 "month" varchar,
 "state" varchar,
 "Month" varchar,
-Primary Key ("state", "Month"),
 "Positive" dec,
 "Negative" dec,
 "Neutral" dec,
 "Compound" dec
 );
+
 
