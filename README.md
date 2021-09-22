@@ -24,7 +24,7 @@ Snscrape is a scraper tool for social media data. Using snscrape's sntwitter wit
 * mask & government
 
 For each tweet scraped, the following data was collected:
-* Tweets ID
+* Tweet ID
 * Tweet Date
 * Tweet content
 * Username
@@ -79,7 +79,9 @@ Finally, the dataset was exported to a CSV file (tweets_final.csv).
 
 
 ## Data Loading
-Once the data frames were finalized, they were connected and loaded into the Mask_Data database created in PostgreSQL and formatted using pgAdmin 4. A Total of eight tables were created in this database. 
+
+
+Once the data frames were finalized, they were connected and loaded into the Mask_Data database created in PostgreSQL and formatted using pgAdmin 4. A Total of eight tables were created in this database. The code for creating the tables in PostgreSQL can be found in the file titled “mask_data_colums.sql”. An example:
 
 ```SQL
 CREATE TABLE tweets (
@@ -103,7 +105,7 @@ Primary Key ("state", "Month"),
 
 Once the tables were created, the data from the 8 dataframes created by the imported CSV files in Pandas, was imported using SQLAlchemy. The code pd.read_sql_query was used in Pandas to verify that the data loaded properly into each SQL table. The eight tables included 7 month tables (April-October) and 1 tweets table. The ETL_Final file is where the Pandas code is located.
 
-A simple merge command was shown as an example of how the tables could be combined for analysis.
+Here is a simple merge command to show an example of how the tables could be combined for analysis.
 ```Python
 merge_df = pd.merge(tweets_final_df, apr_data_df, on = "Month" and "State")
 ```
