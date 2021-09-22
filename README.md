@@ -1,5 +1,4 @@
 # COVID-19 MASK DATA & TWITTER SENTIMENTS
-### Extract, Transform, Load (ETL) Project
 <img src="/analysis/twitter-mask.jpg" align="left" width="100px"/>
 This database contains summary statistics about COVID-19 cases, public health mandates, and public compliance for every U.S. state, as well as over 4,000 tweets about masks from users accross the country. The data timeframe is May-August of 2020.
 <br>
@@ -83,7 +82,7 @@ Finally, the dataset was exported to a CSV file (tweets_final.csv).
 <br>
 
 ## Data Loading
-Once the data frames were finalized, they were connected and loaded into the Mask_Data database created in PostgreSQL and formatted using pgAdmin 4. A Total of eight tables were created in this database. The code for creating the tables in PostgreSQL can be found in the file titled “mask_data_colums.sql”. An example:
+Once the data frames were finalized, they were connected and loaded into the Mask_Data database created in PostgreSQL and formatted using pgAdmin 4. We loaded our data frames to SQL because of the relational nature of the data. We used the Months and State column to compare our Month dataframes and our Tweet data frame. A Total of eight tables were created in this database. The code for creating the tables in PostgreSQL can be found in the file titled “mask_data_colums.sql”. An example:
 
 ```SQL
 CREATE TABLE may (
