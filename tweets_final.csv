@@ -1,4 +1,4 @@
-tweet.id,tweet.date,content,tweet.username,user.location,user.id,state,Month,Positive,Negative,Neutral,Compound
+tweet.id,tweet.date,content,tweet.username,user.location,user.id,State,Month,Positive,Negative,Neutral,Compound
 1.27E+18,2020-05-29 18:02:15+00:00,"Calling on @realDonaldTrump to end the #CDC #maskmandate (which NEVER made any sense!) If people don't have symptoms they don't have #covid and the authorities are playing #publichealth ground-hog &amp;witch-hunt. End this! Please, #replacetheleadership at CDC! #firemaskers",di_daisyistand,"Southern Colorado, USA",3072080773,Colorado,2020-05,0.132,0,0.868,0.6487
 1.26E+18,2020-05-25 17:11:58+00:00,@BillKristol Kristol adores Mob Rule. People with Asthma are exempted from #MaskMandate. #Kristol_Stoopid,JuliaHaverinen,"Singed Pole, Maine",856347266,Maine,2020-05,0.178,0,0.822,0.3818
 1.26E+18,2020-05-24 19:35:47+00:00,"If you worked anywhere near the public during our ""#lockdowns"" you may be delusional if you believe you HAVEN'T been exposed to #covid19. The #maskmandate (forcing everyone) is based on a lie.",di_daisyistand,"Southern Colorado, USA",3072080773,Colorado,2020-05,0.038,0,0.962,0.0572
