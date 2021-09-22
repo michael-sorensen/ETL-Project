@@ -8,6 +8,7 @@ The database was constructed from two data sources.
 #### 1. "Mask Adherence and Rate of COVID-19 across the United States"<br>
 <sup><sub>Fischer CB, Adrien N, Silguero JJ, Hopper JJ, Chowdhury AI, Werler MM (2021) Mask adherence and rate of COVID-19 across the United States. PLoS ONE 16(4): e0249891. https://doi.org/10.1371/journal.pone.0249891</sup></sub>
 This dataset was downloaded in a CSV format. Each row represented a U.S. State and contained columns for a variety COVID-19 related metrics for each month in the May-August timeframe, as well as demographic data for each state.
+<br><br><img src="covid-data-ex.png" width="100%"/><br>
 
 #### 2. Twitter Data (snscrape)
 Snscrape is a scraper tool for social media data. Using snscrape's sntwitter with a python wrapper, 1000 tweets were scraped for the 10 queries listed below, for each of the five months.
@@ -20,9 +21,7 @@ Snscrape is a scraper tool for social media data. Using snscrape's sntwitter wit
 * wearing a mask is ""
 * mask & children OR mask & kids
 * mask & government
-<br>
-<img src="twitter-data-ex.png" align="left" width="100%"/>
-<br>
+
 For each tweet scraped, the following data was collected:
 * Tweets ID
 * Tweet Date
@@ -32,12 +31,12 @@ For each tweet scraped, the following data was collected:
 * User ID
 
 All the data scraped was put into a pandas dataframe and exported as a CSV file ('tweets_raw.csv')
-
+<br><br><img src="twitter-data-ex.png" width="100%"/><br>
 
 ## Data Transformation
+```Python
 
-
-
+```
 
 
 #### Cleaning
