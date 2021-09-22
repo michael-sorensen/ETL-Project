@@ -1,6 +1,7 @@
 # ETL-Project
 <img src="/analysis/twitter-mask.jpg" align="left" width="100px"/>
-This database contains **summary statistics about COVID-19** cases, public health mandates, and public compliance for every U.S. state, as well as over **4,000 tweets about masks** from users accross the country. The data timeframe is May-August of 2020.
+This database contains summary statistics about COVID-19 cases, public health mandates, and public compliance for every U.S. state, as well as over 4,000 tweets about masks from users accross the country. The data timeframe is May-August of 2020.
+<br>
 <br>
 <br>
 
@@ -33,6 +34,7 @@ For each tweet scraped, the following data was collected:
 
 All the data scraped was put into a pandas dataframe and exported as a CSV file ('tweets_raw.csv')
 
+<br>
 
 ## Data Transformation
 ### Covid Data
@@ -77,10 +79,9 @@ Using NLTK's Sentiment Analyzer module, each tweet was assigned values for four 
 
 Finally, the dataset was exported to a CSV file (tweets_final.csv).
 
+<br>
 
 ## Data Loading
-
-
 Once the data frames were finalized, they were connected and loaded into the Mask_Data database created in PostgreSQL and formatted using pgAdmin 4. A Total of eight tables were created in this database. The code for creating the tables in PostgreSQL can be found in the file titled “mask_data_colums.sql”. An example:
 
 ```SQL
