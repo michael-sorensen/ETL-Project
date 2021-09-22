@@ -43,10 +43,10 @@ First, the raw twitter data was loaded into a dataframe, which contained 38,262 
 
 Because user location is a self-reported variable, there was little consistancy in the variable values. For example, a user may report their location as "Southern Colorado", "Miami, FL", or "BEAUTIFUL SUNNY CALIFORNIA!". To standardize user location, the variable was mapped using a function that referenced dictionaries to convert state abbreviations (e.g. AK), full state names ("California"), and major cities ("Seattle"), to full state names. If a user location contained no references to a city or state it was dropped from the dataframe. This standardized location variable was added as 'State'.
 
-///Python
+```Python
 import nltk.sentiment.vader
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-///
+```
 Given there is little analysis that can be done with solely textual data, each tweet was analyzed using NLTK's Sentiment Analyzer module. A sentiment analyzer is a process of contextual text analyses, which determines whether a statement (in this case a tweet), is negative, positive, or neutral.
 
 using
