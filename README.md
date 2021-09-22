@@ -10,7 +10,7 @@ The database was constructed from two data sources.
 This dataset was downloaded in a CSV format. Each row represented a U.S. State and contained columns for a variety COVID-19 related metrics for each month in the May-August timeframe. 
 
 #### 2. Twitter Data (snscrape)
-Snscrape is a scraper tool for social media data. Using snscrape's sntwitter with a python wrapper, 1000 tweets were scraped for the following 10 queries, for each of the five months.
+Snscrape is a scraper tool for social media data. Using snscrape's sntwitter with a python wrapper, 1000 tweets were scraped for the 10 queries listed below, for each of the five months.
 * #maskmandate
 * masks are ""
 * #mask
@@ -33,10 +33,10 @@ For each tweet scraped, the following data was collected:
 All the data scraped was put into a pandas dataframe and exported as a CSV file ('tweets_raw.csv')
 
 
+## Data Transformation
+For the COVID-19 data, the metrics were separated into seperate dataframes for each month.
 
 
-
-* **T**ransform: what data cleaning or transformation was required.
 ​
 * **L**oad: the final database, tables/collections, and why this was chosen.
 ​
