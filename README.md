@@ -20,9 +20,9 @@ Snscrape is a scraper tool for social media data. Using snscrape's sntwitter wit
 * wearing a mask is ""
 * mask & children OR mask & kids
 * mask & government
+<img src="twitter-data-ex.png" align="left" width="100%"/>
 
 For each tweet scraped, the following data was collected:
-
 * Tweets ID
 * Tweet Date
 * Tweet content
@@ -34,36 +34,30 @@ All the data scraped was put into a pandas dataframe and exported as a CSV file 
 
 
 ## Data Transformation
-For the COVID-19 data, the metrics were separated into seperate dataframes for each month.
 
 
 
 
+
+#### Cleaning
 First, the raw twitter data was loaded into a dataframe, which contained 38,262 unique tweets. Then the month of each tweet was extracted from the 'tweet.date' timestamp and added as a new variable 'Month', and tweets without user location were dropped from the dataframe.
 
 Because user location is a self-reported variable, there was little consistancy in the variable values. For example, a user may report their location as "Southern Colorado", "Miami, FL", or "BEAUTIFUL SUNNY CALIFORNIA!". To standardize user location, the variable was mapped using a function that referenced dictionaries to convert state abbreviations (e.g. AK), full state names ("California"), and major cities ("Seattle"), to full state names. If a user location contained no references to a city or state it was dropped from the dataframe. This standardized location variable was added as 'State'.
+
+#### Sentiment Analysis
+
+Given there is little analysis that can be done with solely textual data, each tweet was analyzed using NLTK's Sentiment Analyzer module. A sentiment analyzer is a process of contextual text analyses, which determines whether a statement (in this case a tweet), is negative, positive, or neutral.
 
 ```Python
 import nltk.sentiment.vader
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 ```
-Given there is little analysis that can be done with solely textual data, each tweet was analyzed using NLTK's Sentiment Analyzer module. A sentiment analyzer is a process of contextual text analyses, which determines whether a statement (in this case a tweet), is negative, positive, or neutral.
 
-using
+Using NLTK's Sentiment Analyzer module, each tweet was assigned values for four new variables "Positive",	"Negative",	"Neutral", and "Compound". "Positive",	"Negative",	and "Neutral" are on a 0-1 scale, with 1 being the highest likelihood that the statement can be categorized by that variable. (In other words, if a tweet has a .9 "Negative" value, it's highly probable the sentiment of the tweet is negative). The "Compound" variable is on a -1 to 1 scale, with -1 representing negative sentiments and 1 representing positive. To further clean the data, all tweets with a completely neutral evaluation (0 compound value) were dropped.
 
-
-
+Finally, the final dataset was exported to a CSV file (tweets_final.csv).
 
 
 
-​
-* **L**oad: the final database, tables/collections, and why this was chosen.
-​
 
-
-  Adherance to Mask Policy
-  Total COVID-19 Cases
-  Strictness of Policy (bool)
-  Mask Policy in Effect (bool)
-  Average Week Case Rate
-  Average Monthly Case Rate
+## Data Loading
