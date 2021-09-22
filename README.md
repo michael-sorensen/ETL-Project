@@ -20,8 +20,9 @@ Snscrape is a scraper tool for social media data. Using snscrape's sntwitter wit
 * wearing a mask is ""
 * mask & children OR mask & kids
 * mask & government
+<br>
 <img src="twitter-data-ex.png" align="left" width="100%"/>
-
+<br>
 For each tweet scraped, the following data was collected:
 * Tweets ID
 * Tweet Date
