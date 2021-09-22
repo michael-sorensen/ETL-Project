@@ -11,10 +11,10 @@ This dataset was downloaded in a CSV format. Each row represented a U.S. State a
 
 2. Twitter Data (snscrape)
 Snscrape is a scraper tool for social media data. Using snscrape's sntwitter with a python wrapper, 1000 tweets were scraped for the following 10 queries, for each month in the given timeframe:
-    * #maskmandate
-   *  masks are *
-   *  #mask
-  *   mask & public
+* #maskmandate
+*  masks are "*"
+*  #mask
+*   mask & public
     mask & mandate
     mask & CDC
     wearing a mask is *
