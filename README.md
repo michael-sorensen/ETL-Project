@@ -84,21 +84,19 @@ Finally, the dataset was exported to a CSV file (tweets_final.csv).
 Once the data frames were finalized, they were connected and loaded into the Mask_Data database created in PostgreSQL and formatted using pgAdmin 4. A Total of eight tables were created in this database. The code for creating the tables in PostgreSQL can be found in the file titled “mask_data_colums.sql”. An example:
 
 ```SQL
-CREATE TABLE tweets (
-"tweet.id" VARCHAR,
-"tweet.date" date,
-"content" text,
-"tweet.username" varchar,
-"user.location" varchar,
-"user.id" varchar,
-"state" varchar,
-"Month" varchar,
-Primary Key ("state", "Month"),
-"Positive" dec,
-"Negative" dec,
-"Neutral" dec,
-"Compound" dec
+CREATE TABLE may (
+"State" VARCHAR,
+"Month" VARCHAR,
+"adh_MAYavg" DEC,
+"tot_cases_May" INT,
+"case_rate_May" DEC,
+"Wk_case_rate_May" DEC,
+"strictMayPol" INT,
+"maskMAY75" INT,
+"MaskMayPol" INT,
+"Wk_MayHI" INT
 );
+
 ```
 
 Once the tables were created, the data from the 8 dataframes created by the imported CSV files in Pandas, was imported using SQLAlchemy. The code pd.read_sql_query was used in Pandas to verify that the data loaded properly into each SQL table. The eight tables included 7 month tables (April-October) and 1 tweets table. The ETL_Final file is where the Pandas code is located.
