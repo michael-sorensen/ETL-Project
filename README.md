@@ -38,7 +38,7 @@ All the data scraped was put into a pandas dataframe and exported as a CSV file 
 
 ## Data Transformation
 ### Covid Data
-<kbd><img src="covid-data-ex-2.png" width="100%"/></kbd><br>
+<kbd><img src="/analysis/covid-data-ex-2.png" width="100%"/></kbd><br>
 We used a raw csv from an online medical journal, PLOS ONE, that researched mask adherence and rate of Covid-19 across the United States and the District of Columbia.
 
 We provided separate data sets for each month from April to October of 2020 . Because policies varied from month-to-month, statistics for each month were inconsistent and we needed placeholder columns in order to have data frames with consistent columns. 
@@ -61,7 +61,7 @@ We dropped columns that provided “0” values. We placed NaN values for column
 
 
 ### Twitter Data
-<kbd><img src="twitter-data-ex.png" width="100%"/></kbd><br>
+<kbd><img src="/analysis/twitter-data-ex.png" width="100%"/></kbd><br>
 #### Cleaning
 First, the raw twitter data was loaded into a dataframe, which contained 38,262 unique tweets. Then the month of each tweet was extracted from the 'tweet.date' timestamp and added as a new variable 'Month', and tweets without user location were dropped from the dataframe.
 
